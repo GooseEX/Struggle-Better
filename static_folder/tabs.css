@@ -17,8 +17,10 @@
 }
 
 body{
-  background-image: url('https://c1.staticflickr.com/5/4142/4894306201_d789abedf1_b.jpg');
 }
 
 .bgimg-1 {
+    width:100%;
+    height:50%;
+    z-index: -10;
 }
