@@ -19,8 +19,27 @@
 body{
 }
 
+h1 {
+   position: absolute;
+   top: 200px;
+   left: 15px;
+   width: 100%;
+   color: #000033;
+   text-align: center;
+}
 .bgimg-1 {
     width:100%;
-    height:50%;
+    height:100%;
     z-index: -10;
+}
+
+.bgimg-2 {
+  width: 100%;
+  height:100%;
+  z-index: -10;
+}
+.item-padding{
+  padding-top: 8px;
+  padding-bottom: 24px
+  margin-bottom: 16px!important;
 }
