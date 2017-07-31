@@ -15,11 +15,42 @@
 # limitations under the License.
 #
 import webapp2
+import os
+import jinja2
+
+jinja_environment = jinja2.Environment(loader=
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_environment.get_template('templates/main.html')
         self.response.write('hey world!')
 
+
+class StressHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/stress.html')
+        self.response.write(template.render())
+
+class NutritionHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/nutrition.html')
+        self.response.write(template.render())
+
+class TimeHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/time.html')
+        self.response.write(template.render())
+
+class BudgetHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/budget.html')
+        self.response.write(template.render())
+
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/stress', StressHandler),
+    ('/nutrition', NutritionHandler),
+    ('/time', TimeHandler),
+    ('/budget', BudgetHandler),
 ], debug=True)
