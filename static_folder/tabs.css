@@ -17,5 +17,10 @@
 }
 
 body{
-  background-color: blue;
+}
+
+.bgimg-1 {
+    width:100%;
+    height:50%;
+    z-index: -10;
 }
