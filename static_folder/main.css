@@ -19,8 +19,11 @@ body, html {
     height: 100%;
     line-height: 1.8;
     font-size: 18px;
+    background-color: #FCE61B;
 }
 .bgimg-1{
-  width: 100%;
-  height: 100%;
+    width: 75%;
+    height: 100%;
+    object-fit: contain;
+
 }
