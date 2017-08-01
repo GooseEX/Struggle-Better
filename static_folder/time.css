@@ -43,6 +43,11 @@ h4 {
   font-size: 40px;
   color: #000033;
 }
+
+a:link {
+color: black;
+}
+
 .bgimg-1 {
     width:100%;
     height:100%;
@@ -73,6 +78,12 @@ h4 {
 }
 
 .item-padding ol{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.item-padding ul{
+  list-style-type:none;
   display: flex;
   align-items: center;
   flex-direction: column;
