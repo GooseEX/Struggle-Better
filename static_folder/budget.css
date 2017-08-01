@@ -35,13 +35,11 @@ h4 {
   top: 300px;
   left: 15px;
   width: 100%;
-  color: #000033;
   text-align: center;
 
 }
 .parallaxfont{
   font-size: 40px;
-  color: #000033;
 }
 .bgimg-1 {
     width:100%;
@@ -55,7 +53,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('http://drdarrenchua.com/wp-content/uploads/2017/01/timeislife.jpg');
+  background-image: url('https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAApYAAAAJDc4ZDVhN2ExLTljOGQtNDZlNC04YTY3LTcwNjU1MzQ1ODk1OQ.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
