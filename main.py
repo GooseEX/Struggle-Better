@@ -47,7 +47,7 @@ class BudgetHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
-    ('/main.html', MainHandler),
+    ('/', MainHandler),
     ('/stress.html', StressHandler),
     ('/nutrition.html', NutritionHandler),
     ('/time.html', TimeHandler),
