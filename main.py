@@ -73,6 +73,7 @@ class BlogHandler(webapp2.RequestHandler):
 
         me = Blog(name = name, title = title, text = text, created = datetime.datetime.now())
         my_key = me.put()
+        print my_key 
         template = jinja_environment.get_template('templates/blog.html')
         self.response.out.write(template.render(template_vars))
 

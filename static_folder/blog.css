@@ -59,6 +59,7 @@ color: black;
 }
 .content{
   background-color: #1e8adf;
+  border: 2px solid gray;
 }
 .bgimg-1 {
     width:100%;
