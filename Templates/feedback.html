@@ -23,27 +23,30 @@
 
 
   <p><b><i>Hope that we were able to help you struggle better!</i></b></p>
-
-  <form method="post">
-    <p>Name: <input type="text" name="user_name"></p>
-    <p>E-mail: <input type="text" name="user_email"></p>
-    <p> Which page did you find the most helpful?
-      <br>
-      Stress<input type="radio" name="tab" id="option_stress">
-      <br>
-      Nutrition<input type="radio" name="tab" id="option_nutrition">
-      <br>
-      Time Management<input type="radio" name="tab" id="option_time">
-      <br>
-      Budget Management<input type="radio" name="tab" id="option_budget">
-      <br>
-    </p>
-    <label>Please leave a comment below:
-      <p></p>
-      <textarea></textarea>
-    </label>
-    <button name="submit_feedback">Submit</button>
-  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script src="/resource/feedback.js"></script>
+  <div id="form">
+    <form method="post" name="feedback_form">
+      <p>Name: <input type="text" name="name" id="name"></p>
+      <p>E-mail: <input type="text" name="email" id="e-mail"></p>
+      <p> Which page did you find the most helpful?
+        <br>
+        Stress<input type="radio" name="tab" id="option_stress" value=1>
+        <br>
+        Nutrition<input type="radio" name="tab" id="option_nutrition" value=2>
+        <br>
+        Time Management<input type="radio" name="tab" id="option_time" value=3>
+        <br>
+        Budget Management<input type="radio" name="tab" id="option_budget" value=4>
+        <br>
+      </p>
+      <label>Please leave a comment below:
+        <p></p>
+        <textarea name="comment" id="comment"></textarea>
+      </label>
+      <button name="submit_feedback">Submit</button>
+    </form>
+  </div>
 </body>
 
 
