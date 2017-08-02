@@ -38,7 +38,6 @@ function toggleWhenClicked10() {
     $("#budget_tip10P").toggle();
 }
 
-
 function setup() {
   $("#budget_tip1P").hide();
   $("#budget_tip2P").hide();
