@@ -55,11 +55,22 @@ class BudgetHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/budget.html')
         self.response.write(template.render())
+class Feedback(ndb.Model):
+    name = ndb.StringProperty()
+    email = ndb.StringProperty()
+    tab_rate = ndb.IntegerProperty()
+    feedback = ndb.StringProperty()
 
 class FeedbackHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/feedback.html')
         self.response.write(template.render())
+
+    def get(post):
+        name = self.request.get('name')
+        email = self.request.get('e-mail')
+        tab_rating  = self.request.get('tab')
+        feedback = self.request.get('comment')
 
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
