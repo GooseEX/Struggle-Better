@@ -6,20 +6,27 @@ function save_feedback(event) {
   var tab_rating = $('tab').val();
   var comment = $('#comment').val();
 
+  function on_success(){
+    print('Thank you')
+  }
   var url = '/FeedbackHandler';
   var data = {
     'name' = name,
     'e-mail' = email,
     'tab' = tab_rating,
-    'comment' = comment
+    'comment' = comment,
   };
-
+  console.log('setting var');
   var settings = {
-    'type': 'type',
+    'type': 'POST',
     'data': data,
-    'success': renderUserInfo,
+    'success': on_success,
   };
+  console.log('hello');
+  print('made into save feedback');
   $.ajax(url, settings);
+  print('made into save feedback2');
+  console.log('hello2');
 }
 
 function setup(){

@@ -75,6 +75,7 @@ class FeedbackHandler(webapp2.RequestHandler):
 
         feedback_result = Feedback(name = name, email = email, tab_rate = tab_rating, feedback = feedback)
         feedback_result.put()
+        logging.info('store data')
 
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
