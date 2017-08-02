@@ -71,13 +71,16 @@ class BlogHandler(webapp2.RequestHandler):
         name = self.request.get('name')
         title=  self.request.get('title')
         text= self.request.get('text')
-        template_vars = {'name' : name,
-                         'title' : title,
-                         'text' : text,
-                        }
 
         me = Blog(name = name, title = title, text = text, created = datetime.datetime.now())
         my_key = me.put()
+        query = Blog.query()
+        blogs = query.fetch()
+        template_vars = {'name' : name,
+                         'title' : title,
+                         'text' : text,
+                         'blogs': blogs,
+                        }
         template = jinja_environment.get_template('templates/blog.html')
         self.response.out.write(template.render(template_vars))
 
