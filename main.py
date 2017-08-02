@@ -56,6 +56,11 @@ class BudgetHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/budget.html')
         self.response.write(template.render())
 
+class FeedbackHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/feedback.html')
+        self.response.write(template.render())
+
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/blog.html')
@@ -73,8 +78,6 @@ class BlogHandler(webapp2.RequestHandler):
 
         me = Blog(name = name, title = title, text = text, created = datetime.datetime.now())
         my_key = me.put()
-        listofblogs = []
-        listofblogs
         template = jinja_environment.get_template('templates/blog.html')
         self.response.out.write(template.render(template_vars))
 
@@ -85,5 +88,6 @@ app = webapp2.WSGIApplication([
     ('/nutrition.html', NutritionHandler),
     ('/time.html', TimeHandler),
     ('/budget.html', BudgetHandler),
-    ('/blog.html', BlogHandler)
+    ('/blog.html', BlogHandler),
+    ('/feedback.html', FeedbackHandler)
 ], debug=True)
