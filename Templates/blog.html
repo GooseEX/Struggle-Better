@@ -27,12 +27,14 @@
       		<p>Today I am feeling...<textarea id="textbox"name="text"></textarea></p>
       		<button>Submit</button>
       	</form>
-
-        <p>{{ name }}</p>
-      	<p>{{title}}</p>
-        <p>{{text}}</p>
-        <p>{{created}}</p>
     </div>
+
+
+        <div class="blogcontainer">
+          {% for i in blogs %}
+           <p><div class="blogs">Blog: {{ i.blogs }} <br> User: {{i.name}} <br> Title: {{title}} <br> {{text}}</div></p>
+           {%endfor%}
+        </div>
 
 </body>
 
