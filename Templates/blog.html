@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Blog</title>
+  <link rel="stylesheet" href= "/resource/blog.css">
+</head>
+<body>
+  <div class="navbar">
+          <a href = "main.html"><button class="navbtn">HOME</button></a>
+          <a href = "stress.html"><button class="navbtn">STRESS</button></a>
+          <a href = "nutrition.html"><button class="navbtn">NUTRITION</button></a>
+          <a href = "time.html"><button class="navbtn">TIME MANAGEMENT</button></a>
+          <a href = "budget.html"><button class="navbtn">BUDGET MANAGEMENT</button></a>
+          <a href = "blog.html"><button class="navbtn">BLOG</button></a>
+          <a href = "feedback.html"><button class="navbtn">FEEDBACK</button></a>
+  </div>
+  <!-- First Image -->
+
+    <div class="imageword">
+      <img class="bgimg-1" src="http://cdn2.hubspot.net/hub/57042/file-557394426-jpg/images/Business_Blog.jpg">
+    </div>
+    <h4><em>(Scroll down)</h4>
+
+    <div class="content">
+      	<form method="post">
+      		<p>Name:<input type="text" name="name"></p>
+      		<p>Title:<input type="text" name="title"></p>
+      		<p>Today I am feeling...<textarea id="textbox"name="text"></textarea></p>
+      		<button>Submit</button>
+      	</form>
+
+        <p>{{ name }}</p>
+      	<p>{{title}}</p>
+        <p>{{text}}</p>
+        <p>{{created}}</p>
+    </div>
+
+</body>
+
+
+<div class="spacer"></div>
+
+<footer>
+  <p>This website has been created by Tania Nelzy, Anthony Portillo, and Mayckol Zuniga.</p>
+  <p> &copy; Struggle Better </p>
+</footer>
+
+</html>
