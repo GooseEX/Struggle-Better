@@ -67,11 +67,14 @@ class FeedbackHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/feedback.html')
         self.response.write(template.render())
 
-    def get(post):
+    def post(self):
         name = self.request.get('name')
-        email = self.request.get('e-mail')
-        tab_rating  = self.request.get('tab')
+        email = self.request.get('email')
+        tab_rating  = int(self.request.get('tab'))
         feedback = self.request.get('comment')
+
+        feedback_result = Feedback(name = name, email = email, tab_rate = tab_rating, feedback = feedback)
+        feedback_result.put()
 
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
