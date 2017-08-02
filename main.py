@@ -63,7 +63,7 @@ class FeedbackHandler(webapp2.RequestHandler):
 
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/feedback.html')
+        template = jinja_environment.get_template('templates/blog.html')
         self.response.write(template.render())
 
     def post(self):
