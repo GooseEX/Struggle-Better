@@ -56,12 +56,11 @@ class BudgetHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/budget.html')
         self.response.write(template.render())
 
-class FeedbackHandler(webapp2.RequestHandler):
+class BlogHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/feedback.html')
+        template = jinja_environment.get_template('templates/blog.html')
         self.response.write(template.render())
 
-<<<<<<< HEAD
     def post(self):
         # TODO: Fill in and fix this function! Make sure to save the artist to the database.
         name = self.request.get('name')
@@ -74,12 +73,11 @@ class FeedbackHandler(webapp2.RequestHandler):
 
         me = Blog(name = name, title = title, text = text, created = datetime.datetime.now())
         my_key = me.put()
-        print my_key 
+        listofblogs = []
+        listofblogs
         template = jinja_environment.get_template('templates/blog.html')
         self.response.out.write(template.render(template_vars))
 
-=======
->>>>>>> 94b25765279704602f934989edeb759c1aaa7314
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/main.html', MainHandler),
@@ -87,5 +85,5 @@ app = webapp2.WSGIApplication([
     ('/nutrition.html', NutritionHandler),
     ('/time.html', TimeHandler),
     ('/budget.html', BudgetHandler),
-    ('/feedback.html', FeedbackHandler)
+    ('/blog.html', BlogHandler)
 ], debug=True)
