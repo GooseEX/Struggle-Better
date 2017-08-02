@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #
+# -*- coding: utf-8 -*-
 # Copyright 2007 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +15,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import datetime
 import webapp2
 import os
 import jinja2
+from google.appengine.ext import ndb
+
+
+class Blog(ndb.Model):
+    name = ndb.StringProperty()
+    title = ndb.StringProperty()
+    text = ndb.StringProperty()
+    created = ndb.DateTimeProperty()
 
 jinja_environment = jinja2.Environment(loader=
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -46,11 +56,6 @@ class BudgetHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/budget.html')
         self.response.write(template.render())
 
-class FeedbackHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('templates/feedback.html')
-        self.response.write(template.render())
-
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/main', MainHandler),
@@ -58,5 +63,4 @@ app = webapp2.WSGIApplication([
     ('/nutrition', NutritionHandler),
     ('/time', TimeHandler),
     ('/budget', BudgetHandler),
-    ('/feedback', FeedbackHandler)
 ], debug=True)

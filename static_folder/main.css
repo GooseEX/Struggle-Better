@@ -3,6 +3,8 @@
   width: 100%;
   top: 0;
   z-index: 1;
+  background-color: white;
+  margin
 }
 
 .navbtn {
@@ -15,15 +17,34 @@
    display: inline-block;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.spacer {
+    flex: 1;
+}
+
 body, html {
     height: 100%;
     line-height: 1.8;
     font-size: 18px;
-    background-color: #FCE61B;
+    background-color: rgb(247, 240, 53);
 }
 .bgimg-1{
     width: 75%;
     height: 100%;
     object-fit: contain;
-
+}
+footer {
+  background-color: white;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  overflow:hidden;
+  z-index: 1;
 }
