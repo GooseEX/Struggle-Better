@@ -17,6 +17,16 @@
    display: inline-block;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.spacer {
+    flex: 1;
+}
+
 body, html {
     height: 100%;
     line-height: 1.8;
@@ -87,4 +97,14 @@ color: black;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
 }
