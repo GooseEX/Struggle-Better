@@ -46,11 +46,17 @@ class BudgetHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/budget.html')
         self.response.write(template.render())
 
+class FeedbackHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/feedback.html')
+        self.response.write(template.render())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/main.html', MainHandler),
-    ('/stress.html', StressHandler),
-    ('/nutrition.html', NutritionHandler),
-    ('/time.html', TimeHandler),
-    ('/budget.html', BudgetHandler)
+    ('/main', MainHandler),
+    ('/stress', StressHandler),
+    ('/nutrition', NutritionHandler),
+    ('/time', TimeHandler),
+    ('/budget', BudgetHandler),
+    ('/feedback', FeedbackHandler)
 ], debug=True)
