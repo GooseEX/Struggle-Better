@@ -24,7 +24,7 @@
       	<form method="post">
       		<p>Name:<input type="text" name="name"></p>
       		<p>Title:<input type="text" name="title"></p>
-      		<p>Today I am feeling...<textarea id="textbox"name="text"></textarea></p>
+      		<p>Today I am feeling...<textarea id="textbox" name="text"></textarea></p>
       		<button>Submit</button>
       	</form>
     </div>
@@ -32,8 +32,8 @@
 
         <div class="blogcontainer">
           {% for i in blogs %}
-           <p><div class="blogs">Blog: {{ i.blogs }} <br> User: {{i.name}} <br> Title: {{i.title}} <br> {{i.text}}</div></p>
-           {%endfor%}
+            <p><div class="blogs">Blog: <!--{{ i.blogs}} --> <br> User: {{i.name}} <br> Title: {{i.title}} <br> {{i.text}}</div></p>
+          {%endfor%}
         </div>
 
 </body>

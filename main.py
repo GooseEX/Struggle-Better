@@ -19,6 +19,7 @@ import datetime
 import webapp2
 import os
 import jinja2
+import logging
 from google.appengine.ext import ndb
 
 
@@ -74,8 +75,13 @@ class FeedbackHandler(webapp2.RequestHandler):
 
 class BlogHandler(webapp2.RequestHandler):
     def get(self):
+        query = Blog.query()
+        blogs = query.fetch()
+        template_vars = {
+                         'blogs': blogs,
+                        }
         template = jinja_environment.get_template('templates/blog.html')
-        self.response.write(template.render())
+        self.response.write(template.render(template_vars))
 
     def post(self):
         # TODO: Fill in and fix this function! Make sure to save the artist to the database.
@@ -87,9 +93,9 @@ class BlogHandler(webapp2.RequestHandler):
         my_key = me.put()
         query = Blog.query()
         blogs = query.fetch()
-        template_vars = {'name' : name,
-                         'title' : title,
-                         'text' : text,
+        blogs.append(me)
+            ########b.key.delete() #remove all keys
+        template_vars = {
                          'blogs': blogs,
                         }
         template = jinja_environment.get_template('templates/blog.html')
