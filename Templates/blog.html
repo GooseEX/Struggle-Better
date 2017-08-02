@@ -32,7 +32,7 @@
 
         <div class="blogcontainer">
           {% for i in blogs %}
-            <p><div class="blogs">Blog: <!--{{ i.blogs}} --> <br> User: {{i.name}} <br> Title: {{i.title}} <br> {{i.text}}</div></p>
+            <div class="blogs"> <!--{{ i.blogs}} --> <br> {{i.name}}'s Blog <br> Title: {{i.title}} <br> {{i.text}}</div>
           {%endfor%}
         </div>
 
