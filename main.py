@@ -68,6 +68,7 @@ class FeedbackHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
     def post(self):
+        logging.info('post start')
         name = self.request.get('name')
         email = self.request.get('email')
         tab_rating  = int(self.request.get('tab'))

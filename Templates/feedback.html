@@ -23,8 +23,8 @@
 
 
   <p><b><i>Hope that we were able to help you struggle better!</i></b></p>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script src="/resource/feedback.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script src="resource/feedback.js"></script>
   <div id="form">
     <form method="post" name="feedback_form">
       <p>Name: <input type="text" name="name" id="name"></p>
@@ -44,9 +44,10 @@
         <p></p>
         <textarea name="comment" id="comment"></textarea>
       </label>
-      <button name="submit_feedback">Submit</button>
+      <button type="submit" name="submit_feedback" id="submit">Submit</button>
     </form>
   </div>
+  <div id="thank_you"><i><b>Thank You For Your Feedback!</b></i></div>
 </body>
 
 
