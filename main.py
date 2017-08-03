@@ -36,27 +36,27 @@ jinja_environment = jinja2.Environment(loader=
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/main.html')
+        template = jinja_environment.get_template('Templates/main.html')
         self.response.write(template.render())
 
 class StressHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/stress.html')
+        template = jinja_environment.get_template('Templates/stress.html')
         self.response.write(template.render())
 
 class NutritionHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/nutrition.html')
+        template = jinja_environment.get_template('Templates/nutrition.html')
         self.response.write(template.render())
 
 class TimeHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/time.html')
+        template = jinja_environment.get_template('Templates/time.html')
         self.response.write(template.render())
 
 class BudgetHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/budget.html')
+        template = jinja_environment.get_template('Templates/budget.html')
         self.response.write(template.render())
 class Feedback(ndb.Model):
     name = ndb.StringProperty()
@@ -66,7 +66,7 @@ class Feedback(ndb.Model):
 
 class FeedbackHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/feedback.html')
+        template = jinja_environment.get_template('Templates/feedback.html')
         self.response.write(template.render())
 
     def post(self):
@@ -116,7 +116,7 @@ class SigninHandler(webapp2.RequestHandler):
             greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
                 nickname, logout_url)
         else:
-            login_url = users.create_login_url('/signin.html')
+            login_url = users.create_login_url('/main.html')
             greeting = '<a href="{}">Sign in</a>'.format(login_url)
 
         self.response.write(

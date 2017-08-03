@@ -1,16 +1,27 @@
 <html>
 <head>
   <title>Sign In</title>
+  <link rel="stylesheet" href= "/resource/signin.css">
 </head>
 
 <body>
 
-  <div class="content">
-      <form method="get">
-        <p>User:<input type="text" name="user"></p>
-        <button>Submit</button>
-      </form>
-  </div>
+  <!-- First Image -->
+
+    <div class="bgimg-1">
+      <img class="bgimg-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZgne_AxZLsIdBr4NHYsvhlKvMiZ962R1z7WMDArBhYpYPQLlSYA">
+      <h4><em>(Scroll down)</h4>
+    </div>
+
+
+  <form method="get">
+      <div class="signinbox">
+            <label for="signinbox">Email</label>
+            <input type="text" name="user" placeholder="Email" data-required="required" value>
+            <input type="password" tabindex="-1">
+            <button>Submit</button>
+      </div>
+  </form>
 
 
 
