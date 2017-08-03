@@ -99,4 +99,15 @@ footer {
     width: 100%;
     overflow:hidden;
 }
-s
+h3{
+  text-align: center;
+}
+#thank_you{
+  text-align: center;
+}
+
+.thankyouimg{
+  height:200px;
+  width:400px;
+  image-rendering: pixelated;
+}
